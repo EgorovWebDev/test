@@ -1,2 +1,3 @@
-# gridhouse
+# gridhouse-frontend
+
 Diplom work

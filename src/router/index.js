@@ -1,28 +1,40 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+const routerViewContainer = () => import('@/containers/router-view/index')
+const pageContainer = () => import('@/containers/page-container/index')
 const objectsPage = () => import('@/pages/objects/index')
 const objectPage = () => import('@/pages/object/index')
-const registerPage = () => import('@/pages/register/index')
+const editObjectPage = () => import('@/pages/editObject/index')
+const registrationPage = () => import('@/pages/regist/index')
 const authPage = () => import('@/pages/auth/index')
-const pageContainer = () => import('@/containers/page-container/index')
-const routerViewContainer = () => import('@/containers/router-view/index')
+const notFoundPage = () => import('@/pages/notFound/index')
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '*',
+    redirect: '/404'
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: notFoundPage
+  },
   {
     path: '/auth',
     name: 'auth',
     component: authPage
   },
   {
-    path: '/register',
-    name: 'register',
-    component: registerPage
+    path: '/registration',
+    name: 'registration',
+    component: registrationPage
   },
   {
     path: '',
+    redirect: '/objects',
     component: pageContainer,
     children: [
       // ObJECTS
@@ -39,6 +51,16 @@ const routes = [
             path: ':id',
             name: 'object',
             component: objectPage
+          },
+          {
+            path: ':id/edit',
+            name: 'editObject',
+            component: editObjectPage
+          },
+          {
+            path: 'new',
+            name: 'newObject'
+            // component: newObjectPage
           }
         ]
       }

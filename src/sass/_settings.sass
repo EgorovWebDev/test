@@ -1,5 +1,95 @@
 @import 'reset'
 @import 'fonts'
 @import 'variables'
+@import 'elementIO'
 html
-  font-family: 'roboto'
+  font-family: 'Roboto'
+.button
+  &.button
+    &-emptyb
+      width: 190px
+      height: 50px
+      background: inherit
+      outline: none
+      border: 2px solid $color-dark
+      border-radius: 4px
+      font-size: 20px
+      font-family: 'Roboto'
+      &:hover
+        cursor: pointer
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: #ffffff
+  border-radius: 4px
+  width: 850px
+  padding-top: 50px
+  margin: 0 auto
+  &-agreement
+    &__text
+      color: $color-dark
+  &-title
+    padding: 0 0 15px 0
+    text-align: center
+    font-size: 35px
+    color: $color-dark
+    width: 100%
+    border-bottom: 2px solid $color-dark
+  &-container
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    background-image: url('~@/assets/img/backgroundImg2.png')
+    background-repeat: no-repeat
+    background-size: cover
+  &-link
+      display: flex
+      font-size: 14px
+      &>a 
+        color: $color-blue
+        text-decoration: none
+        border-bottom: 2px solid $color-blue
+        margin-bottom: 25px
+.el-button
+  &.button
+    &-empty
+      &-b
+        border: 2px solid $color-dark
+        background-color: inherit 
+        color: $color-dark
+        margin-top: 20px
+        width: 60%
+        font-family: 'Roboto'
+        font-size: 16px
+        &:hover
+          border-color: $color-yellow-dark
+          color: $color-yellow-dark
+          background-color: inherit
+        &:focus
+          border-color: $color-yellow-dark
+          color: $color-yellow-dark
+          background-color: inherit
+        &:active
+          border-color: $color-yellow-dark
+          color: $color-yellow-dark
+          background-color: inherit
+          transform: scale(1.07)
+          transition: .2s
+@media all and (max-width: 870px)
+  .form
+    width: 100%
+    &-container
+      background-image: unset
+      background-repeat: unset
+      background-size: unset
+    &-title
+      margin-bottom: 45px
+  .el-button
+    &.button
+      &-empty
+        &-b
+          &:active
+            transform: unset
+            transition: unset

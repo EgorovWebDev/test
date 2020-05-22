@@ -25,14 +25,16 @@ export default {
 .page
   &-container
     background-image: url('~@/assets/img/backgroundImg1.png')
+    background-size: cover
     display: flex
     flex-direction: column
     align-items: center
+    padding-bottom: 20px
     &-wrapper
       width: 1140px
       margin-top: 20px
       background-color: #ffffff
       border-radius: 4px
-      padding: 35px
       position: relative
+      box-shadow: -3px 3px 8px 3px rgba(51, 51, 51, 0.29)
 </style>

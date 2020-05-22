@@ -1,16 +1,16 @@
 <template>
   <div class="form-container">
-    <authorizationView/>
+    <registrationView/>
   </div>
 </template>
 
 <script>
-import authorizationView from '@/views/auth'
+import registrationView from '@/views/regist'
 
 export default {
-  name: 'authPage',
+  name: 'objectPage',
   components: {
-    authorizationView
+    registrationView
   }
 }
 </script>

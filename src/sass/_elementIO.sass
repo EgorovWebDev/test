@@ -1,0 +1,45 @@
+.app
+  & .el
+    &-form
+      &-item
+        &__label
+          margin-bottom: 10px
+          font-size: 18px
+          color: $color-dark
+    &-input
+      &__inner
+        font-size: 16px
+        border: 2px solid $color-dark
+        &:hover
+          border-color: $color-yellow-dark
+        &:focus
+          border-color: $color-yellow-dark
+        &::placeholder
+          color: $color-dark
+          font-family: 'Roboto'
+    &-checkbox
+      &__inner
+        border: 2px solid $color-dark
+        width: 25px
+        height: 25px
+        &:hover
+          border-color: $color-yellow-dark
+        &:after
+          border: 2px solid #ffffff
+          border-left: 0
+          border-top: 0
+          top: -1px
+          left: 5px
+          height: 17px
+          width: 9px
+      &__input.is-checked .el-checkbox__inner
+        border-color: $color-yellow-dark
+        background-color: $color-yellow-dark
+        &+.el-checkbox__label
+          border-color: $color-yellow-dark
+  .el-checkbox__input.is-checked+.el-checkbox__label
+    color: $color-dark
+  .el-checkbox__input.is-focus .el-checkbox__inner
+    border-color:  $color-yellow-dark
+  .el-breadcrumb__inner .is-link
+    color: red

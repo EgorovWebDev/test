@@ -1,22 +1,24 @@
 <template>
   <header>
     <div class="header-logo">
-      <img src="@/assets/img/icons/logo.svg" alt="GridHouse">
+      <router-link :to="{name: 'objects'}">
+        <img src="@/assets/img/icons/logo.svg" alt="GridHouse">
+      </router-link>
     </div>
     <ul class='header-nav'>
       <li>
         <router-link :to="{name: 'objects'}">
-          Мои Объекты
+          Мои Объекты  <i class="el-icon-office-building"></i>
         </router-link>
       </li>
       <li>
         <router-link :to="{name: 'users'}">
-         Пользователи
+         Пользователи <i class="el-icon-user"></i>
         </router-link>
       </li>
       <li>
         <router-link :to="{name: 'settings'}">
-          Настройки
+          Настройки <i class="el-icon-setting"></i>
         </router-link>
       </li>
     </ul>
@@ -24,7 +26,7 @@
         <router-link :to="{name: 'settings'}">
         <div class="header-account__login">Login</div>
       </router-link>
-      <router-link :to="{name: 'registr'}">
+      <router-link :to="{name: 'auth'}">
         <div class="header-account__exit">
           <img src="@/assets/img/icons/logout.svg" alt="logout">
         </div>
@@ -61,6 +63,9 @@ a
   &:hover
     transition: .5s
     color: #D8C200
+i
+  margin-left: 6px
+  font-size: 24px
 .header
   &-account
     display: flex

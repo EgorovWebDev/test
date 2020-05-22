@@ -21,10 +21,10 @@ export default {
       objects: [
         {
           id: 1,
-          name: 'Журавль1',
-          adress: 'Лупаская пупская',
-          houses: 4,
-          appartaments: 3
+          name: 'Жилой комплекс "Западный"',
+          adress: 'г.Ростов-на-Дону, улица Садовая, дом 13',
+          houses: 1,
+          appartaments: 50
         },
         {
           id: 1,
